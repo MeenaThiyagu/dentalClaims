@@ -18,7 +18,7 @@ public class ClaimDentalService {
     public ClaimDentalRepository claimDentalRepository;
 
     public List<ClaimDental> findAllDentalClaims(Long id){
-    	System.out.println("Inside dental claims services");
+    	System.out.println("Inside dental claims services ");
         return claimDentalRepository.findByMemberId(id);
     }
     public List<ClaimDental> findAllDentalClaims(){
