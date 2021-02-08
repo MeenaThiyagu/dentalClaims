@@ -24,5 +24,9 @@ public class ClaimDentalService {
     public List<ClaimDental> findAllDentalClaims(){
         return claimDentalRepository.findAll();
     }
+    public CompletableFuture<List<ClaimDental>> getDentalClaimsAsync() {
+		 List<ClaimDental> object= claimDentalRepository.findAll();
+		 return CompletableFuture.completedFuture(object);
+	}
 
 }
