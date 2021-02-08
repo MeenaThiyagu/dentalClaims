@@ -35,4 +35,9 @@ public class ClaimDentalController {
 		System.out.println("dental repository "+ dentalRepObj.findAll());
 		return  dentalRepObj.findAll();
 	}
+	
+	@RequestMapping(value="/getDentalClaimsAsync",produces="application/json")
+	public CompletableFuture<ResponseEntity> getDentalClaimsAsync(){
+	return  dentalServiceObj.getDentalClaimsAsync().thenApply(ResponseEntity::ok);
+	}
 }
